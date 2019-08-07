@@ -1,123 +1,177 @@
 body {
   color: red;
   font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-
-
+  text-transform: uppercase
 }
 
 .base {
-  /* text-align: center; */
+  background: -webkit-gradient(linear, left top, right top, from(rgba(239, 241, 191, 1)), to(rgba(161, 203, 183, 1)));
   background: linear-gradient(90deg, rgba(239, 241, 191, 1) 0%, rgba(161, 203, 183, 1) 100%);
-  /* padding: 15%; */
   height: 100vh;
   width: 100vw;
-
-  /* box-sizing: border-box; */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
-  align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
 }
 
 .content {
-  background-color: white;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
   font-size: 14px;
-  color: rgb(124, 119, 119);
+  color: #7c7777;
   width: 100%;
-  /* height: 100%; */
   margin: 16%;
   min-width: 900px;
-  box-shadow: 0px 0px 49px -4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0 0 49px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 49px -4px rgba(0, 0, 0, 0.75);
   background-image: url(../App/wind2.gif);
   background-repeat: no-repeat;
   background-position: right;
-  background-size: contain;
+  background-size: contain
 }
 
 .willer {
   width: auto;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   min-height: 428px;
-  margin-bottom: -1.48%;
-
+  margin-bottom: -1.48%
 }
 
 .weatherCardLEftSide {
-  /* background: white; */
   width: 65%;
   height: 105%;
-  margin: 60px;
-
+  margin: 60px
 }
 
 .weatherCardRightSide {
   width: 37%;
-  height: 100%;
+  height: 100%
 }
 
 .weatherCardLEftSide .container {
-  /* width: 100%; */
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
-  align-self: flex-start;
-
+  -ms-flex-item-align: start;
+  align-self: flex-start
 }
 
 .mainDate h1 {
   margin: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   font-size: 34px;
-  font-weight: 400;
+  font-weight: 400
 }
 
 .mainDate span {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   font-weight: 400;
-  font-size: 34px;
+  font-size: 34px
 }
 
 .curentTemperature {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   font-size: 122px;
   font-weight: 100;
   margin-top: 20px;
-  color: rgb(106, 156, 106);
+  color: #9c9
 }
 
 .curentTemperature i {
-  filter: invert(31%) sepia(13%) saturate(6207%) hue-rotate(44deg) brightness(89%) contrast(90%);
   margin-top: 30px;
   margin-left: 20px;
+  -webkit-filter: invert(21%) sepia(13%) saturate(8207%) hue-rotate(37deg) brightness(99%) contrast(99%);
+  filter: invert(21%) sepia(13%) saturate(8207%) hue-rotate(37deg) brightness(99%) contrast(99%)
 }
 
 .weekHistoryCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
-  align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
 }
 
 .historyCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  margin-right: 15px;
+  margin-right: 15px
 }
 
 .historyCard i {
-  filter: invert(31%) sepia(13%) saturate(6207%) hue-rotate(44deg) brightness(89%) contrast(90%);
-
+  -webkit-filter: invert(31%) sepia(13%) saturate(6207%) hue-rotate(44deg) brightness(89%) contrast(90%);
+  filter: invert(31%) sepia(13%) saturate(6207%) hue-rotate(44deg) brightness(89%) contrast(90%)
 }
