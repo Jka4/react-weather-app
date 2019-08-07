@@ -42,7 +42,7 @@ export default class WeatherCard extends React.Component {
                 <section className='container'>
                     <div className='mainDate'>
                         <h1>
-                            {getDateFromDT(weatherToday.dt, 'ddd')} &nbsp;
+                            {getDateFromDT(weatherToday.dt, 'dddd')} &nbsp;
                             {getDateFromDT(weatherToday.dt, 'D')}
                         </h1>
                         <span>{getDateFromDT(weatherToday.dt, 'MMMM')}</span>
