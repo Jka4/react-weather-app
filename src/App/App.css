@@ -64,7 +64,7 @@ body {
 .weatherCardLEftSide {
   width: 65%;
   height: 105%;
-  margin: 60px
+  margin: 50px
 }
 
 .weatherCardRightSide {
@@ -151,7 +151,8 @@ body {
   justify-content: space-around;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center
+  align-items: center;
+
 }
 
 .historyCard {
@@ -168,7 +169,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-right: 15px
+  /* width: 60px; */
 }
 
 .historyCard i {
