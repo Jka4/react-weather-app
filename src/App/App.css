@@ -30,21 +30,25 @@ body {
   color: rgb(124, 119, 119);
   width: 100%;
   /* height: 100%; */
-  margin: 15%;
-  min-width: 700px;
+  margin: 16%;
+  min-width: 900px;
   box-shadow: 0px 0px 49px -4px rgba(0, 0, 0, 0.75);
+  background-image: url(../App/wind2.gif);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
 }
 
 .willer {
-  width: 100%;
-  height: 105%;
+  width: auto;
+  height: max-content;
   min-height: 428px;
   margin-bottom: -1.48%;
 
 }
 
 .weatherCardLEftSide {
-  background: white;
+  /* background: white; */
   width: 65%;
   height: 105%;
   margin: 60px;
@@ -96,4 +100,24 @@ body {
   filter: invert(31%) sepia(13%) saturate(6207%) hue-rotate(44deg) brightness(89%) contrast(90%);
   margin-top: 30px;
   margin-left: 20px;
+}
+
+.weekHistoryCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.historyCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.historyCard i {
+  filter: invert(31%) sepia(13%) saturate(6207%) hue-rotate(44deg) brightness(89%) contrast(90%);
+
 }

@@ -10,7 +10,7 @@ function App() {
         <WeatherCard />
 
         <div className='weatherCardRightSide'>
-        <img src="./wind2.gif" className='willer' alt="windwiller" />
+
         </div>
 
       </main>
