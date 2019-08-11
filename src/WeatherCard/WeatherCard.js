@@ -3,11 +3,12 @@ import Icon from '../Icon/index';
 import { API_KEY, getDateFromDT, sliceTemp } from '../utils';
 import WeatherHistoryCards from './components/weatherHistoryCards'
 
-
 export default class WeatherCard extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { weather: {} };
+        this.state = {
+            weather: {},
+        }
 
         this.fetchWeatherData = this.fetchWeatherData.bind(this);
     }
@@ -17,7 +18,7 @@ export default class WeatherCard extends React.Component {
     }
 
     async fetchWeatherData() {
-        const json = await fetch(`https://api.openweathermap.org/data/2.5/forecast/daily?q=Kyiv&units=metric&cnt=7&appid=${API_KEY}`);
+        const json = await fetch(`https://api.openweathermap.org/data/2.5/forecast/daily?q=Odessa&units=metric&cnt=7&appid=${API_KEY}`);
         const data = await json.json();
 
         this.setState({ weather: data });
@@ -26,6 +27,7 @@ export default class WeatherCard extends React.Component {
 
 
     render() {
+
         const { weather } = this.state;
 
         if (!weather.list) {
@@ -40,12 +42,19 @@ export default class WeatherCard extends React.Component {
 
             <div className='weatherCardLEftSide'>
                 <section className='container'>
+
+                    <div className="cityName">
+                        {weather.city.name}
+                    </div>
+
                     <div className='mainDate'>
+
                         <h1>
                             {getDateFromDT(weatherToday.dt, 'dddd')} &nbsp;
                             {getDateFromDT(weatherToday.dt, 'D')}
                         </h1>
                         <span>{getDateFromDT(weatherToday.dt, 'MMMM')}</span>
+
                     </div>
                     <div className='curentTemperature'>
                         <span>{sliceTemp(tempDay)}°</span>
