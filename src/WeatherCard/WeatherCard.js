@@ -22,7 +22,7 @@ export default class WeatherCard extends React.Component {
         const data = await json.json();
 
         this.setState({ weather: data });
-        console.log(data)
+        // console.log(data)
     }
 
 

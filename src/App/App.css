@@ -52,15 +52,6 @@ body {
   background-size: contain
 }
 
-.willer {
-  width: auto;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  min-height: 428px;
-  margin-bottom: -1.48%
-}
-
 .weatherCardLEftSide {
   width: 65%;
   height: 105%;
@@ -91,7 +82,12 @@ body {
 .mainDate h1 {
   margin: 0;
   /* width: fit-content; */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   font-size: 34px;
   font-weight: 400
@@ -168,17 +164,14 @@ body {
   filter: invert(31%) sepia(13%) saturate(6207%) hue-rotate(44deg) brightness(89%) contrast(90%)
 }
 
-
 .mainDate {
   margin-top: -38px;
 }
 
 .cityName {
   position: relative;
-  justify-self: center;
   right: 0;
   text-align: right;
   font-size: 30px;
   margin: 0;
-
 }

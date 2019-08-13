@@ -16,16 +16,18 @@ export default class WeatherHistoryCards extends React.Component {
         const { weather } = this.props;
         const weatherForecast = weather.list;
 
+        console.log(weatherForecast);
+
 
         return (
             <div className='weekHistoryCards'>
 
-                {weatherForecast.map((key, i) => (
+                {weatherForecast.map((day, index) => (
 
                     <div className='historyCard'>
-                        <h4 key={i}>{getDateFromDT(weatherForecast[i].dt, 'ddd')}</h4>
-                        <Icon size="small" weatherType={weatherForecast[i].weather[0].main.toLowerCase()} />
-                        <h5>{sliceTemp(weatherForecast[i].temp.day)}°</h5>
+                        <h4 key={day} >{getDateFromDT(weatherForecast[index].dt, 'ddd')}</h4>
+                        <Icon size="small" weatherType={weatherForecast[index].weather[0].main.toLowerCase()} />
+                        <h5 >{sliceTemp(weatherForecast[index].temp.day)}°</h5>
                     </div>
 
                 ))}
