@@ -1,177 +1,210 @@
 body {
   color: red;
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
 }
 
 .base {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(239, 241, 191, 1)), to(rgba(161, 203, 183, 1)));
-  background: linear-gradient(90deg, rgba(239, 241, 191, 1) 0%, rgba(161, 203, 183, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(239, 241, 191, 1) 0%,
+    rgba(161, 203, 183, 1) 100%
+  );
   height: 100vh;
   width: 100vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center
+  align-items: center;
 }
 
 .content {
   background-color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  justify-content: center;
   font-size: 14px;
   color: #7c7777;
   width: 100%;
-  margin: 16%;
+  max-width: 900px;
   min-width: 900px;
-  -webkit-box-shadow: 0 0 49px -4px rgba(0, 0, 0, 0.75);
+  height: 55vh;
+  max-height: 900px;
+  min-height: 500px;
   box-shadow: 0 0 49px -4px rgba(0, 0, 0, 0.75);
-  background-image: url(../App/wind2.gif);
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: contain
 }
 
 .weatherCardLEftSide {
   width: 65%;
-  height: 105%;
-  margin: 50px
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .weatherCardRightSide {
-  width: 37%;
-  height: 100%
-}
-
-.weatherCardLEftSide .container {
+  width: 35%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -ms-flex-item-align: start;
-  align-self: flex-start
 }
 
-.mainDate h1 {
+.video__background {
+  width: 100%;
+  height: 100%;
+  /* background: red; */
+}
+
+.video_content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.weatherCardLEftSide .weatherCardLEftSide__inner {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-self: flex-start;
+}
+
+.topLine {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.topLine__leftSide {
+  margin-top: 2rem;
+  margin-left: 3rem;
+}
+
+.topLine h1 {
   margin: 0;
   /* width: fit-content; */
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   font-size: 34px;
-  font-weight: 400
+  font-weight: 400;
 }
 
-.mainDate span {
-  width: -webkit-max-content;
-  width: -moz-max-content;
+.topLine span {
   width: max-content;
   font-weight: 400;
-  font-size: 34px
+  font-size: 34px;
 }
 
 .curentTemperature {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   font-size: 122px;
   font-weight: 100;
   margin-top: 20px;
-  color: #9c9
+  color: #9c9;
+  margin-left: 3rem;
 }
 
 .curentTemperature i {
   margin-top: 30px;
   margin-left: 20px;
-  -webkit-filter: invert(21%) sepia(13%) saturate(8207%) hue-rotate(37deg) brightness(99%) contrast(99%);
-  filter: invert(21%) sepia(13%) saturate(8207%) hue-rotate(37deg) brightness(99%) contrast(99%)
+  filter: invert(21%) sepia(13%) saturate(8207%) hue-rotate(37deg)
+    brightness(99%) contrast(99%);
 }
 
 .weekHistoryCards {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center
+  align-items: center;
+  width: 100%;
 }
 
 .historyCard {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center
+  align-items: center;
+}
+
+.historyCard:first-child {
+  margin-left: 2rem;
+}
+
+.historyCard:last-child {
+  margin-right: 2rem;
 }
 
 .historyCard i {
-  -webkit-filter: invert(31%) sepia(13%) saturate(6207%) hue-rotate(44deg) brightness(89%) contrast(90%);
-  filter: invert(31%) sepia(13%) saturate(6207%) hue-rotate(44deg) brightness(89%) contrast(90%)
-}
-
-.mainDate {
-  margin-top: -38px;
+  filter: invert(31%) sepia(13%) saturate(6207%) hue-rotate(44deg)
+    brightness(89%) contrast(90%);
 }
 
 .cityName {
-  position: relative;
-  right: 0;
-  text-align: right;
   font-size: 30px;
-  margin: 0;
+  margin-top: 2rem;
+  margin-right: 3rem;
+}
+
+/* *** loader  */
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate2 {
+  0% {
+    transform: rotate(0deg);
+    border-top-color: rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    transform: rotate(180deg);
+    border-top-color: rgba(0, 0, 255, 0.5);
+  }
+  100% {
+    transform: rotate(360deg);
+    border-top-color: rgba(0, 0, 0, 0.5);
+  }
+}
+* {
+  box-sizing: border-box;
+}
+.loader {
+  position: relative;
+  margin: 75px auto;
+  width: 300px;
+  height: 300px;
+  display: block;
+  overflow: hidden;
+}
+.loader div {
+  height: 100%;
+}
+
+.loader,
+.loader div {
+  border-radius: 50%;
+  padding: 8px;
+  border: 2px solid transparent;
+  animation: rotate linear 3.5s infinite;
+  border-top-color: rgba(0, 0, 0, 0.5);
+  border-bottom-color: rgba(0, 0, 255, 0.5);
+}
+
+.loader,
+.loader * {
+  will-change: transform;
 }
