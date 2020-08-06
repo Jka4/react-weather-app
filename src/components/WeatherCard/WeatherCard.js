@@ -11,6 +11,7 @@ export default class WeatherCard extends React.Component {
 
   render() {
     const weather = this.props.weather;
+    console.log("WeatherCard -> render -> weather", weather)
 
     if (!weather.list) {
       return null;

@@ -16,7 +16,7 @@ export default class WeatherHistoryCards extends React.Component {
       <div className='weekHistoryCards'>
         {weatherForecast.map((key, index) => (
           <div key={key.dt.toString()} className='historyCard'>
-            <h4>{getDateFromDT(weatherForecast[index].dt, "ddd")}</h4>
+            <h4>{getDateFromDT(weatherForecast[index].dt, "MM")}</h4>
             <Icon
               size='small'
               weatherType={weatherForecast[index].weather[0].main.toLowerCase()}

@@ -2,6 +2,8 @@ import React from "react";
 import WeatherCard from "../components/WeatherCard/WeatherCard";
 import "./App.css";
 import { API_KEY } from ".././utils";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -11,6 +13,7 @@ export default class App extends React.Component {
 
   componentDidMount() {
     this.fetchWeatherData();
+    AOS.init();
   }
 
   async fetchWeatherData() {
@@ -31,19 +34,22 @@ export default class App extends React.Component {
         {!dataIsEmpy ? (
           <Loader />
         ) : (
-          <main className='content'>
-            <WeatherCard weather={this.state.weather} />
+            <main
+              className='content'
+              data-aos='zoom-out'
+              data-aos-easing='ease-in-out'>
+              <WeatherCard weather={this.state.weather} />
 
-            <div className='weatherCardRightSide'>
-              <div className='video__background'>
-                <video className='video_content' autoPlay muted loop>
-                  <source src='./video/wind2.webm' type='video/webm'></source>
-                  <source src='./video/wind2.mp4' type='video/mp4'></source>
-                </video>
+              <div className='weatherCardRightSide'>
+                <div className='video__background'>
+                  <video className='video_content' autoPlay muted loop>
+                    <source src='./video/wind2.webm' type='video/webm'></source>
+                    <source src='./video/wind2.mp4' type='video/mp4'></source>
+                  </video>
+                </div>
               </div>
-            </div>
-          </main>
-        )}
+            </main>
+          )}
       </div>
     );
   }
