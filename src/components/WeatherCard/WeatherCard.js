@@ -1,50 +1,72 @@
-import React from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import Icon from "../../Icon/index";
-import WeatherHistoryCards from "../weatherHistoryCards/weatherHistoryCards";
 import { getDateFromDT, sliceTemp } from "../../utils";
+import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
+import useGeolocation from 'react-hook-geolocation'
+import { API_KEY } from "../../utils";
 
-export default class WeatherCard extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
+const WeatherHistoryCards = lazy(() => import("../weatherHistoryCards/weatherHistoryCards"));
+
+const WeatherCard = (props) => {
+  const [weather, setWeather] = useState();
+  const geolocation = useGeolocation()
+
+  const lat = geolocation.latitude;
+  const lon = geolocation.longitude;
+
+  useEffect(() => {
+    setWeather(props.weather);
+  }, [props])
+
+
+  const getWeatherForCurrentLocation = async () => {
+    const URL = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
+
+    const json = await fetch(URL);
+    const data = await json.json();
+    setWeather(data);
   }
 
-  render() {
-    const weather = this.props.weather;
-    console.log("WeatherCard -> render -> weather", weather)
+  const canHaveGeolocation = !!geolocation?.accuracy;
+  const weatherToday = weather?.list[0];
+  const tempDay = weatherToday?.temp?.day;
 
-    if (!weather.list) {
-      return null;
-    }
 
-    const weatherToday = weather.list[0];
-    const tempDay = weatherToday.temp.day;
-
-    return (
-      <div className='weatherCardLEftSide'>
-        <section className='weatherCardLEftSide__inner'>
-          <div className='topLine'>
-            <div className='topLine__leftSide'>
-              <h1>
-                {getDateFromDT(weatherToday.dt, "dddd")} &nbsp;
+  return (
+    <div className='weatherCardLEftSide'>
+      {weatherToday && <section className='weatherCardLEftSide__inner'>
+        <div className='topLine'>
+          <div className='topLine__leftSide'>
+            <h1>
+              {getDateFromDT(weatherToday.dt, "dddd")} &nbsp;
                 {getDateFromDT(weatherToday.dt, "D")}
-              </h1>
-              <span>{getDateFromDT(weatherToday.dt, "MMMM")}</span>
-            </div>
-            <div className='cityName'>{weather.city.name}</div>
+            </h1>
+            <span>{getDateFromDT(weatherToday.dt, "MMMM")}</span>
           </div>
-          <div className='curentTemperature'>
-            <span>{sliceTemp(tempDay)}°</span>
-            <span className='mainIcon'>
-              <Icon
-                size='large'
-                weatherType={weatherToday.weather[0].main.toLowerCase()}
-              />
-            </span>
+          <div className='cityName'>
+            <span>{weather.city.name}</span>
+            {canHaveGeolocation && <div className='locationBtn' onClick={getWeatherForCurrentLocation} >
+              <LocationOnOutlinedIcon />
+            </div>}
           </div>
-        </section>
+
+        </div>
+        <div className='curentTemperature'>
+          <span>{sliceTemp(tempDay)}°</span>
+          <span className='mainIcon'>
+            <Icon
+              size='large'
+              weatherType={weatherToday.weather[0].main.toLowerCase()}
+            />
+          </span>
+        </div>
+      </section>}
+
+      <Suspense fallback={'Loading...'} >
         <WeatherHistoryCards weather={weather} />
-      </div>
-    );
-  }
+      </Suspense>
+    </div>
+  );
 }
+
+export default WeatherCard;

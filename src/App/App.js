@@ -1,61 +1,57 @@
-import React from "react";
-import WeatherCard from "../components/WeatherCard/WeatherCard";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import "./App.css";
 import { API_KEY } from ".././utils";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { weather: {} };
-  }
+const WeatherCard = lazy(() => import("../components/WeatherCard/WeatherCard"));
 
-  componentDidMount() {
-    this.fetchWeatherData();
+
+const App = () => {
+  const [weather, setWeather] = useState();
+
+  useEffect(() => {
+    fetchWeatherData();
     AOS.init();
-  }
+  }, []);
 
-  async fetchWeatherData() {
+  const fetchWeatherData = async () => {
     const json = await fetch(
       `https://api.openweathermap.org/data/2.5/forecast/daily?q=Odessa&units=metric&cnt=7&appid=${API_KEY}`
     );
     const data = await json.json();
-
-    this.setState({ weather: data });
+    setWeather(data)
   }
 
-  render() {
-    let data = this.state.weather;
-    let dataIsEmpy = Object.keys(data).length > 0;
 
-    return (
-      <div className='base'>
-        {!dataIsEmpy ? (
-          <Loader />
-        ) : (
-            <main
-              className='content'
-              data-aos='zoom-out'
-              data-aos-easing='ease-in-out'>
-              <WeatherCard weather={this.state.weather} />
+  return (
+    <div className='base'>
+      {!weather?.city ? (
+        <Loader />
+      ) : (
+          <main
+            className='content'
+            data-aos='zoom-out'
+            data-aos-easing='ease-in-out'>
+            <Suspense fallback={'Loading...'} >
+              <WeatherCard weather={weather} />
+            </Suspense>
 
-              <div className='weatherCardRightSide'>
-                <div className='video__background'>
-                  <video className='video_content' autoPlay muted loop>
-                    <source src='./video/wind2.webm' type='video/webm'></source>
-                    <source src='./video/wind2.mp4' type='video/mp4'></source>
-                  </video>
-                </div>
+            <div className='weatherCardRightSide'>
+              <div className='video__background'>
+                <video className='video_content' autoPlay muted loop>
+                  <source src='./video/wind2.webm' type='video/webm'></source>
+                  <source src='./video/wind2.mp4' type='video/mp4'></source>
+                </video>
               </div>
-            </main>
-          )}
-      </div>
-    );
-  }
+            </div>
+          </main>
+        )}
+    </div>
+  );
 }
 
-let Loader = () => {
+const Loader = () => {
   return (
     <div className='loader'>
       <div>
@@ -72,3 +68,5 @@ let Loader = () => {
     </div>
   );
 };
+
+export default App;
