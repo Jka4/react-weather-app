@@ -10,6 +10,7 @@ const WeatherHistoryCards = lazy(() => import("../weatherHistoryCards/weatherHis
 const WeatherCard = (props) => {
   const [weather, setWeather] = useState();
   const geolocation = useGeolocation()
+  console.log("WeatherCard -> geolocation", geolocation)
 
   const lat = geolocation.latitude;
   const lon = geolocation.longitude;
