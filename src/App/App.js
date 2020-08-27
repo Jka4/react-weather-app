@@ -23,7 +23,6 @@ const App = () => {
     setWeather(data)
   }
 
-
   return (
     <div className='base'>
       {!weather?.city ? (
@@ -40,8 +39,8 @@ const App = () => {
             <div className='weatherCardRightSide'>
               <div className='video__background'>
                 <video className='video_content' autoPlay muted loop>
-                  <source src='./video/wind2.webm' type='video/webm'/>
-                  <source src='./video/wind2.mp4' type='video/mp4'/>
+                  <source src={process.env.PUBLIC_URL + '/video/wind2.webm'} type='video/webm' />
+                  <source src={process.env.PUBLIC_URL + '/video/wind2.mp4'} type='video/mp4' />
                 </video>
               </div>
             </div>

@@ -5,10 +5,8 @@ import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import { API_KEY } from "../../utils";
 import { usePosition } from './usePosition';
 
-
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 
 
 const WeatherHistoryCards = lazy(() => import("../weatherHistoryCards/weatherHistoryCards"));
@@ -16,7 +14,6 @@ const WeatherHistoryCards = lazy(() => import("../weatherHistoryCards/weatherHis
 const WeatherCard = (props) => {
   const [weather, setWeather] = useState();
   const { lat, lon, error } = usePosition();
-  console.log("lat, lon, error ", lat, lon, error)
 
   useEffect(() => {
     setWeather(props.weather);
