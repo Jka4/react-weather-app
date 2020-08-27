@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2e0796a17852f0a5f5d44aaf5cdbc336",
+    "revision": "7907b7a3a02a380ef32208f4f5343593",
     "url": "/react-weather-app/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-weather-app/static/css/3.4707e12a.chunk.css"
   },
   {
-    "revision": "d95ac16960b7dbc3ee66",
-    "url": "/react-weather-app/static/css/main.82e18728.chunk.css"
+    "revision": "284e9d29a884c48ee343",
+    "url": "/react-weather-app/static/css/main.268c490c.chunk.css"
   },
   {
     "revision": "4056390f24c9a6f54b0f",
@@ -28,20 +28,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-weather-app/static/js/3.7420c0e0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c14229ca089400a0de3f",
-    "url": "/react-weather-app/static/js/4.15c14235.chunk.js"
+    "revision": "570b6c2bb61f267c58ac",
+    "url": "/react-weather-app/static/js/4.fea3ff13.chunk.js"
   },
   {
     "revision": "ac24e54490bcc6fd6d65",
     "url": "/react-weather-app/static/js/5.8af2cabb.chunk.js"
   },
   {
-    "revision": "d95ac16960b7dbc3ee66",
-    "url": "/react-weather-app/static/js/main.c0a7420f.chunk.js"
+    "revision": "284e9d29a884c48ee343",
+    "url": "/react-weather-app/static/js/main.9aab687b.chunk.js"
   },
   {
-    "revision": "2397ce9005d248afc373",
-    "url": "/react-weather-app/static/js/runtime-main.1132f16d.js"
+    "revision": "03805b45de385d7ee906",
+    "url": "/react-weather-app/static/js/runtime-main.d20d7ce5.js"
   },
   {
     "revision": "194823a019cb70fe37caf4b63e5135b0",
