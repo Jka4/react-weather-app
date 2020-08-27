@@ -18,11 +18,17 @@ const WeatherCard = (props) => {
   const { lat, lon, error } = usePosition();
   console.log("lat, lon, error ", lat, lon, error)
 
-  AOS.init();
-
   useEffect(() => {
     setWeather(props.weather);
   }, [props])
+
+  useEffect(() => {
+    if (lat) {
+      AOS.init();
+      getWeatherForCurrentLocation();
+    }
+
+  }, [lat])
 
 
   const getWeatherForCurrentLocation = async () => {
@@ -48,11 +54,16 @@ const WeatherCard = (props) => {
           </div>
           <div className='cityName'>
             <span>{weather.city.name}</span>
-            {!!lat ? (<div className='locationBtn' data-aos="fade-down"
-              data-aos-easing="linear"
-              data-aos-duration="100" onClick={getWeatherForCurrentLocation} >
-              <LocationOnOutlinedIcon />
-            </div>)
+            {!!lat ? (
+              <div
+                className='locationBtn'
+                data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="100"
+                data-aos-delay="500"
+              >
+                <LocationOnOutlinedIcon />
+              </div>)
               : (
                 <div className='locationBtn'> </div>
               )

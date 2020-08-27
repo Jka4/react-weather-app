@@ -168,14 +168,14 @@ body {
 
 .locationBtn {
   margin-left: 10px;
-  cursor: pointer;
+  /* cursor: pointer; */
   width: 22.5px;
   height: 36px;
 }
 
 .locationBtn svg:hover {
-  fill: black;
-  transform: scale(1.1);
+  /* fill: black; */
+  /* transform: scale(1.1); */
 }
 
 /* *** loader  */

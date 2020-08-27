@@ -9,6 +9,7 @@
     "gh-pages": "2.0.1",
     "moment": "^2.24.0",
     "react": "^16.13.1",
+    "react-addons-perf": "^15.4.2",
     "react-dom": "^16.13.1",
     "react-scripts": "^3.4.3",
     "use-position": "^0.0.7"
