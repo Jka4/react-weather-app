@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8529170685f6249d51c09293eb63949a",
+    "revision": "a25c7b6834ec3f2fe606cd5de7522002",
     "url": "/react-weather-app/index.html"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-weather-app/static/css/3.4707e12a.chunk.css"
   },
   {
-    "revision": "37785e6903f10b63b614",
+    "revision": "284e9d29a884c48ee343",
     "url": "/react-weather-app/static/css/main.268c490c.chunk.css"
   },
   {
-    "revision": "a7125bd5568fa1b5a3fd",
-    "url": "/react-weather-app/static/js/2.40f99f0a.chunk.js"
+    "revision": "5ed587068fd6f86a3d29",
+    "url": "/react-weather-app/static/js/2.6138d415.chunk.js"
   },
   {
     "revision": "5735008847451525374b1f222e4ab316",
-    "url": "/react-weather-app/static/js/2.40f99f0a.chunk.js.LICENSE.txt"
+    "url": "/react-weather-app/static/js/2.6138d415.chunk.js.LICENSE.txt"
   },
   {
     "revision": "9e8e8474a1267f92aacf",
@@ -28,20 +28,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-weather-app/static/js/3.7420c0e0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d19a1d5ada6909cd05eb",
-    "url": "/react-weather-app/static/js/4.12e365de.chunk.js"
+    "revision": "e6814028fa8dfe7baba3",
+    "url": "/react-weather-app/static/js/4.c05b2617.chunk.js"
   },
   {
-    "revision": "c630eafa4578d2345c2a",
-    "url": "/react-weather-app/static/js/5.76d29274.chunk.js"
+    "revision": "78438a12fbfab1268016",
+    "url": "/react-weather-app/static/js/5.a8c383fe.chunk.js"
   },
   {
-    "revision": "37785e6903f10b63b614",
-    "url": "/react-weather-app/static/js/main.a1dddaab.chunk.js"
+    "revision": "284e9d29a884c48ee343",
+    "url": "/react-weather-app/static/js/main.9aab687b.chunk.js"
   },
   {
-    "revision": "e57e2e284847dc1e5b57",
-    "url": "/react-weather-app/static/js/runtime-main.41c59137.js"
+    "revision": "3c81a34723106881fda8",
+    "url": "/react-weather-app/static/js/runtime-main.9ae57f77.js"
   },
   {
     "revision": "194823a019cb70fe37caf4b63e5135b0",
