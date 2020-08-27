@@ -2,18 +2,23 @@ import React, { lazy, Suspense, useEffect, useState } from "react";
 import Icon from "../../Icon/index";
 import { getDateFromDT, sliceTemp } from "../../utils";
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
-import useGeolocation from 'react-hook-geolocation'
 import { API_KEY } from "../../utils";
+import { usePosition } from './usePosition';
+
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+
 
 const WeatherHistoryCards = lazy(() => import("../weatherHistoryCards/weatherHistoryCards"));
 
 const WeatherCard = (props) => {
   const [weather, setWeather] = useState();
-  const geolocation = useGeolocation()
-  console.log("WeatherCard -> geolocation", geolocation)
+  const { lat, lon, error } = usePosition();
+  console.log("lat, lon, error ", lat, lon, error)
 
-  const lat = geolocation.latitude;
-  const lon = geolocation.longitude;
+  AOS.init();
 
   useEffect(() => {
     setWeather(props.weather);
@@ -22,16 +27,13 @@ const WeatherCard = (props) => {
 
   const getWeatherForCurrentLocation = async () => {
     const URL = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
-
     const json = await fetch(URL);
     const data = await json.json();
     setWeather(data);
   }
 
-  const canHaveGeolocation = !!geolocation?.accuracy;
   const weatherToday = weather?.list[0];
   const tempDay = weatherToday?.temp?.day;
-
 
   return (
     <div className='weatherCardLEftSide'>
@@ -46,9 +48,15 @@ const WeatherCard = (props) => {
           </div>
           <div className='cityName'>
             <span>{weather.city.name}</span>
-            {canHaveGeolocation && <div className='locationBtn' onClick={getWeatherForCurrentLocation} >
+            {!!lat ? (<div className='locationBtn' data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration="100" onClick={getWeatherForCurrentLocation} >
               <LocationOnOutlinedIcon />
-            </div>}
+            </div>)
+              : (
+                <div className='locationBtn'> </div>
+              )
+            }
           </div>
 
         </div>

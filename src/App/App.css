@@ -4,6 +4,10 @@ body {
   text-transform: uppercase;
 }
 
+* {
+  user-select: none;
+}
+
 .base {
   background: linear-gradient(90deg,
       rgba(239, 241, 191, 1) 0%,
@@ -165,6 +169,8 @@ body {
 .locationBtn {
   margin-left: 10px;
   cursor: pointer;
+  width: 22.5px;
+  height: 36px;
 }
 
 .locationBtn svg:hover {

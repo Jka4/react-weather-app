@@ -1,6 +1,6 @@
 import React, { lazy, Suspense, useEffect, useState } from "react";
 import "./App.css";
-import { API_KEY } from ".././utils";
+import { API_KEY } from "../utils";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -40,8 +40,8 @@ const App = () => {
             <div className='weatherCardRightSide'>
               <div className='video__background'>
                 <video className='video_content' autoPlay muted loop>
-                  <source src='./video/wind2.webm' type='video/webm'></source>
-                  <source src='./video/wind2.mp4' type='video/mp4'></source>
+                  <source src='./video/wind2.webm' type='video/webm'/>
+                  <source src='./video/wind2.mp4' type='video/mp4'/>
                 </video>
               </div>
             </div>
