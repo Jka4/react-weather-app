@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/react-weather-app/static/css/main.1e5687d2.css",
-    "main.js": "/react-weather-app/static/js/main.2e8ca0b4.js",
-    "static/js/173.6641a3b0.chunk.js": "/react-weather-app/static/js/173.6641a3b0.chunk.js",
+    "main.js": "/react-weather-app/static/js/main.212ec184.js",
+    "static/js/387.310fa751.chunk.js": "/react-weather-app/static/js/387.310fa751.chunk.js",
     "static/js/682.115553ea.chunk.js": "/react-weather-app/static/js/682.115553ea.chunk.js",
-    "static/js/295.f421b0b3.chunk.js": "/react-weather-app/static/js/295.f421b0b3.chunk.js",
+    "static/js/232.ceb4012b.chunk.js": "/react-weather-app/static/js/232.ceb4012b.chunk.js",
     "static/media/_spritesheet.png": "/react-weather-app/static/media/_spritesheet.cedf91e51b95ec0d3d72.png",
     "static/media/_nt_spritesheet.png": "/react-weather-app/static/media/_nt_spritesheet.6545c07bdb2b1ff73d77.png",
     "static/media/mostlysunny.svg": "/react-weather-app/static/media/mostlysunny.aa0d714dba1325326772.svg",
@@ -49,13 +49,13 @@
     "static/media/nt_clear.svg": "/react-weather-app/static/media/nt_clear.2d150c8bf408b74591e7.svg",
     "static/media/nt_sunny.svg": "/react-weather-app/static/media/nt_sunny.2d150c8bf408b74591e7.svg",
     "main.1e5687d2.css.map": "/react-weather-app/static/css/main.1e5687d2.css.map",
-    "main.2e8ca0b4.js.map": "/react-weather-app/static/js/main.2e8ca0b4.js.map",
-    "173.6641a3b0.chunk.js.map": "/react-weather-app/static/js/173.6641a3b0.chunk.js.map",
+    "main.212ec184.js.map": "/react-weather-app/static/js/main.212ec184.js.map",
+    "387.310fa751.chunk.js.map": "/react-weather-app/static/js/387.310fa751.chunk.js.map",
     "682.115553ea.chunk.js.map": "/react-weather-app/static/js/682.115553ea.chunk.js.map",
-    "295.f421b0b3.chunk.js.map": "/react-weather-app/static/js/295.f421b0b3.chunk.js.map"
+    "232.ceb4012b.chunk.js.map": "/react-weather-app/static/js/232.ceb4012b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1e5687d2.css",
-    "static/js/main.2e8ca0b4.js"
+    "static/js/main.212ec184.js"
   ]
 }
